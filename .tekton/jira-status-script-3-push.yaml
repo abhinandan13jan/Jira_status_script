@@ -10,7 +10,7 @@ metadata:
       == "main"
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: app-sample-go-basic2
+    appstudio.openshift.io/application: test-app
     appstudio.openshift.io/component: jira-status-script-3
     pipelines.appstudio.openshift.io/type: build
   name: jira-status-script-3-on-push
@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/abhindas-tenant/jira-status-script-3:{{revision}}
+    value: quay.io/redhat-user-workloads-stage/abhindas-tenant/jira-status-script-3:{{revision}}
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:
